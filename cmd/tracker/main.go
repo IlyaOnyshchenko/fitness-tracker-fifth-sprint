@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/Yandex-Practicum/tracker/internal/actioninfo"
-	"github.com/Yandex-Practicum/tracker/internal/daysteps"
-	"github.com/Yandex-Practicum/tracker/internal/personaldata"
-	"github.com/Yandex-Practicum/tracker/internal/trainings"
+	"fitness-tracker-fifth-sprint/tracker/internal/actioninfo"
+	"fitness-tracker-fifth-sprint/tracker/internal/daysteps"
+	"fitness-tracker-fifth-sprint/tracker/internal/personaldata"
+	"fitness-tracker-fifth-sprint/tracker/internal/trainings"
 )
 
 func main() {
