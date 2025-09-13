@@ -9,7 +9,7 @@ type Personal struct {
 }
 
 func (p Personal) Print() {
-	fmt.Println("Имя:", p.Name)
-	fmt.Printf("Вес:%.2f", p.Weight)
-	fmt.Printf("Рост%.2f:", p.Height)
+	fmt.Printf("Имя: %s\n", p.Name)
+	fmt.Printf("Вес: %.2f кг.\n", p.Weight)
+	fmt.Printf("Рост: %.2f м.\n", p.Height)
 }

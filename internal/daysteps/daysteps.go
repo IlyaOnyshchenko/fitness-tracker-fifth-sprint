@@ -24,7 +24,7 @@ func (ds *DaySteps) Parse(datastring string) (err error) {
 	}
 	ds.Steps, err = strconv.Atoi(dataInput[0])
 	if err != nil {
-		return err
+		return fmt.Errorf("ошибочный формат данных количества шагов: %w", err)
 	}
 	// Значение шагов не может быть отрицательным или равным нулю
 	if ds.Steps <= 0 {
@@ -33,7 +33,7 @@ func (ds *DaySteps) Parse(datastring string) (err error) {
 	// Находим продолжительность прогулки walkDur (третий элемент dataInput). Парсим строку в переменную time.Duration, обрабатывая возможную ошибку
 	ds.Duration, err = time.ParseDuration(dataInput[1])
 	if err != nil {
-		return err
+		return fmt.Errorf("ошибка преобразования времени в часы: %w", err)
 	}
 	// Проверяем, чтобы продолжительность была положительна и отлична от нуля
 	if ds.Duration <= 0 {
@@ -49,7 +49,7 @@ func (ds DaySteps) ActionInfo() (string, error) {
 	// Также обрабатываем возможные ошибки и выводим их на экран
 	calories, err := spentenergy.WalkingSpentCalories(ds.Steps, ds.Personal.Weight, ds.Personal.Height, ds.Duration)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("ошибка входных данных: %w", err)
 	}
 	// Итоговый результат присваиваем переменной res в виде форматированного вывода и возвращаем её значение из функции
 	res := fmt.Sprintf("Количество шагов: %d.\nДистанция составила %.2f км.\nВы сожгли %.2f ккал.\n", ds.Steps, dist, calories)

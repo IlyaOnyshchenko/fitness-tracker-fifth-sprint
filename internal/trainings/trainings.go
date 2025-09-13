@@ -28,7 +28,7 @@ func (t *Training) Parse(datastring string) (err error) {
 	// Также не забываем обработать ошибку преобразования
 	t.Steps, err = strconv.Atoi(dataInput[0])
 	if err != nil {
-		return err
+		return fmt.Errorf("недопустимый формат ввода количества шагов %w", err)
 	}
 	// Значение шагов не может быть отрицательным или равным нулю
 	if t.Steps <= 0 {
@@ -39,7 +39,7 @@ func (t *Training) Parse(datastring string) (err error) {
 	// Находим продолжительность прогулки walkDur (третий элемент dataInput). Парсим строку в переменную time.Duration, обрабатывая возможную ошибку
 	t.Duration, err = time.ParseDuration(dataInput[2])
 	if err != nil {
-		return err
+		return fmt.Errorf("недопустимый формат ввода продолжительности прогулки %w", err)
 	}
 	// Проверяем, чтобы продолжительность была положительна и отлична от нуля
 	if t.Duration <= 0 {
