@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/IlyaOnyshchenko/fitness-tracker-fifth-sprint/internal/personaldata"
-	"github.com/IlyaOnyshchenko/fitness-tracker-fifth-sprint/internal/spentenergy"
+	"github.com/IlyaOnyshchenko/fitness_tracker_fifth_sprint/internal/personaldata"
+	"github.com/IlyaOnyshchenko/fitness_tracker_fifth_sprint/internal/spentenergy"
 )
 
 // Создаем структуру для хранения данных о количестве шагов, виде активности, времени активности и данных о пользователе
