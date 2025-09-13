@@ -1,13 +1,14 @@
 package trainings
 
 import (
-	"fitness-tracker-fifth-sprint/internal/personaldata"
-	"fitness-tracker-fifth-sprint/internal/spentenergy"
 	"fmt"
 	"log"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/IlyaOnyshchenko/fitness-tracker-fifth-sprint/internal/personaldata"
+	"github.com/IlyaOnyshchenko/fitness-tracker-fifth-sprint/internal/spentenergy"
 )
 
 type Training struct {
