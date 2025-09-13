@@ -1,13 +1,12 @@
 package daysteps
 
 import (
+	"fitness-tracker-fifth-sprint/internal/personaldata"
+	"fitness-tracker-fifth-sprint/internal/spentenergy"
 	"fmt"
 	"strconv"
 	"strings"
 	"time"
-
-	"github.com/IlyaOnyshchenko/fitness-tracker-fifth-sprint/internal/personaldata"
-	"github.com/IlyaOnyshchenko/fitness-tracker-fifth-sprint/internal/spentenergy"
 )
 
 type DaySteps struct {
