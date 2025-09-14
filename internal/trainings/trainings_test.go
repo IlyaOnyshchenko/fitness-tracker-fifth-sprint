@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/IlyaOnyshchenko/fitness_tracker_fifth_sprint"
+	"github.com/IlyaOnyshchenko/fitness_tracker_fifth_sprint/internal/personaldata"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
